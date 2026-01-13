@@ -17,7 +17,7 @@ A clean, efficient, and reliable Flutter application designed to help users mana
 
 | Home Screen | Add Medicine | Notification |
 |:---:|:---:|:---:|
-| ![Home](assets/screenshots/home.png) | ![Add](assets/screenshots/add.png) | ![Notify](assets/screenshots/notify.png) |
+| ![Home](assets/screenshots/home_screen.jpeg) | ![Add](assets/screenshots/add_medicine.jpeg) | ![Notify](assets/screenshots/notification.jpeg) |
 *(Note: Add your screenshots to an `assets/screenshots` folder)*
 
 ---

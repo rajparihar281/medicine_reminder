@@ -17,10 +17,10 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
 
-  # Notifications (Using the version suggested by your error)
+  # Notifications
   flutter_local_notifications: ^18.0.1
 
-  # Timezone (Specific version to avoid conflict)
+  # Timezone
   timezone: ^0.9.4
 
   # Utilities
@@ -37,6 +37,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   
-  # Ensure you have your app icon generated or this line will cause errors.
-  # If you don't have an icon yet, you can comment this out, 
-  # but notifications require an icon at @mipmap/ic_launcher
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/screenshots/
+    # If you have a specific images folder, you can also do:
+    # - assets/images/
