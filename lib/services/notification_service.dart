@@ -1,19 +1,16 @@
 import 'dart:io';
-// 1. Give this package a specific name (fln) to avoid conflicts
 import 'package:flutter_local_notifications/flutter_local_notifications.dart'
     as fln;
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz;
 
 class NotificationService {
-  // Use the alias 'fln' to refer to the plugin
   final fln.FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin =
       fln.FlutterLocalNotificationsPlugin();
 
   Future<void> init() async {
     tz.initializeTimeZones();
 
-    // Use alias 'fln' for settings
     const fln.AndroidInitializationSettings initializationSettingsAndroid =
         fln.AndroidInitializationSettings('@mipmap/ic_launcher');
 
@@ -59,7 +56,7 @@ class NotificationService {
       scheduleDate = scheduleDate.add(const Duration(days: 1));
     }
 
-    // 2. The fix: Using the alias 'fln' ensures the Enum is found correctly
+
     await _flutterLocalNotificationsPlugin.zonedSchedule(
       id,
       title,
@@ -75,9 +72,8 @@ class NotificationService {
           ticker: 'ticker',
         ),
       ),
-      // Required parameter for Android 13+
+    
       androidScheduleMode: fln.AndroidScheduleMode.exactAllowWhileIdle,
-      // Fixed: Accessing the Enum via the alias
       uiLocalNotificationDateInterpretation:
           fln.UILocalNotificationDateInterpretation.absoluteTime,
       matchDateTimeComponents: fln.DateTimeComponents.time,
